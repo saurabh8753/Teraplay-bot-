@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/index.js", "use": "@vercel/node" },
+    { "src": "pages/watch.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/watch", "dest": "/pages/watch.html" },
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ]
+}
